@@ -7,7 +7,7 @@ class HelloWorld(unittest.TestCase):
 	#va a ejecutar todo lo necesario antes de hacer una prueba
 	#va a preparar el entorno de la prueba
 	def setUp(self):
-		self.driver = webdriver.Chrome(executable_path = r'D:\chromedriver.exe')
+		self.driver = webdriver.Chrome(executable_path = r'.\chromedriver.exe')
 		driver = self.driver
 		driver.implicitly_wait(10)
 	
@@ -22,7 +22,7 @@ class HelloWorld(unittest.TestCase):
 		self.driver.quit()
 
 
-#
+
 if __name__ == "__main__":
 	unittest.main(verbosity = 2, testRunner = HTMLTestRunner(output = 'reportes', report_name='hello-world-report'))
 
