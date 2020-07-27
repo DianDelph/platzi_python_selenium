@@ -21,7 +21,13 @@ class HomePageTests(unittest.TestCase):
 
 	def test_search_button_enabled(self):
 		button = self.driver.find_elements_by_class_name("button")
-		
+	
+	def test_count_of_promo_banner_images(self):
+		banner_list = self.driver.find_element_by_class_name("promos")   
+		banners = banner_list.find_elements_by_tag_name('img')
+		#verifico si la longitud de banners coincide con la cantidad de imágenes
+		self.assertEqual(3 , len(banners)) 
+
 	def tearDown(self):
 		pass
 
