@@ -2,7 +2,7 @@ import unittest
 from selenium import webdriver
 from time import sleep
 
-class CompareProducts(unittest.TestCase):
+class AddRemoveElements(unittest.TestCase):
 
 	def setUp(self):
 		self.driver = webdriver.Chrome(executable_path = r'.\chromedriver.exe')
